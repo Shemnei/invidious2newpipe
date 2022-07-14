@@ -21,8 +21,12 @@ fn parse(opml_file: &Path) -> OPML {
 }
 
 fn get_subs(opml: OPML) -> Vec<Outline> {
-	let outlines = opml.body.outlines;
-	outlines.into_iter().next().unwrap().outlines
+	opml.body
+		.outlines
+		.into_iter()
+		.find(|o| o.text == "YouTube Subscriptions")
+		.unwrap()
+		.outlines
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Parser)]
@@ -61,5 +65,6 @@ fn main() {
 		.write(true)
 		.open(Path::new(&output))
 		.unwrap();
+
 	serde_json::to_writer_pretty(output, &Root { subscriptions }).unwrap();
 }
