@@ -44,9 +44,9 @@ fn main() {
 	let mut subscriptions = Vec::with_capacity(subs.len());
 
 	for outline in subs {
-		if let Some(url) = &outline.xml_url {
+		if let Outline { text: name, xml_url: Some(url), .. } = outline {
 			let sub = Subscription {
-				name: outline.text.clone(),
+				name,
 				url: url.replace("feeds/videos.xml?channel_id=", "channel/"),
 			};
 			subscriptions.push(sub);
