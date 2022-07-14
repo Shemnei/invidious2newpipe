@@ -13,4 +13,6 @@ Converts the Invidious export format `Export subscriptions as OPML (for NewPipe 
 
 ## References
 
+- NewPipe: <https://newpipe.net/>
+- Invidious: <https://invidious.io/>
 - NewPipe's export/import format: <https://github.com/TeamNewPipe/NewPipe/blob/5be40f62f3eeb52bb43e78db0cb7bcbb1b2be051/app/src/main/java/org/schabi/newpipe/local/subscription/services/ImportExportJsonHelper.java>
