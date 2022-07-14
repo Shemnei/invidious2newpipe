@@ -1,5 +1,7 @@
 # invidious2newpipe
 
+__WARNING: This codebase is rather wonky and should not be used for anything serious__
+
 Converts the Invidious export format `Export subscriptions as OPML (for NewPipe & FreeTube)` to NewPipe's import format `Previous export`.
 
 ## Usage
